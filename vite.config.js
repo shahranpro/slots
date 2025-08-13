@@ -3,9 +3,16 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: true,
+  },
   server: {
-    host: true, // isse network IP visible hoga
-    port: 5173, // optional
-    open: true, // browser auto open (optional)
+    host: true,
+    port: 5173,
+    open: true,
   },
 })
